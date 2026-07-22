@@ -1,1 +1,27 @@
+name: Website Form Monitor
 
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */8 * * *'
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: |
+          npm install
+          npx playwright install --with-deps
+
+      - name: Run Form Monitor
+        run: node monitor.js
