@@ -1,1 +1,14 @@
-
+{
+  "name": "website-form-monitor",
+  "version": "1.0.0",
+  "description": "Monitor website forms and send email alerts",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "nodemailer": "^6.9.16",
+    "dotenv": "^16.4.7"
+  }
+}
