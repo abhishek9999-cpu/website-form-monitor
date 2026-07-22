@@ -3,7 +3,7 @@ require("dotenv").config();
 const axios = require("axios");
 const nodemailer = require("nodemailer");
 
-const websiteURL = "https://www.dbuzzz.com/thank-you-page";
+const websiteURL = "https://www.dbuzzz.com";
 
 async function checkWebsite() {
   try {
